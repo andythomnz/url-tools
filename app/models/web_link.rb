@@ -1,0 +1,2 @@
+class WebLink < ApplicationRecord
+end
