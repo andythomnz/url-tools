@@ -11,8 +11,11 @@ class WebLinksController < ApplicationController
   def create
     @web_link = WebLink.build(create_params)
 
-    @web_link.save!
-    redirect_to root_url
+    if @web_link.save
+      redirect_to root_url
+    else
+      render json: @web_link.errors, status: :unprocessable_entity
+    end
   end
 
   def new
