@@ -7,6 +7,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <%= stylesheet_link_tag "application",
+                            "https://fonts.googleapis.com/css2?family=Exo+2&display=swap",
+                            media: "all", "data-turbolinks-track" => true %>
+
     <%= javascript_importmap_tags %>
   </head>
 
