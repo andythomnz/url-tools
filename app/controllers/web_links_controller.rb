@@ -12,11 +12,17 @@ class WebLinksController < ApplicationController
     @web_link = WebLink.build(create_params)
 
     if @web_link.save
-      redirect_to root_url
+      redirect_to @web_link
     else
       render json: @web_link.errors, status: :unprocessable_entity
     end
   end
+
+  def show
+    @web_link = WebLink.find(show_params[:id])
+  end
+
+
 
   def new
     @web_link = WebLink.new
@@ -30,6 +36,10 @@ class WebLinksController < ApplicationController
 
   def create_params
     params.require(:web_link).permit(:key, :destination)
+  end
+
+  def show_params
+    params.permit(:id)
   end
 
   def set_web_link

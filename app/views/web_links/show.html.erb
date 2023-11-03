@@ -1,0 +1,10 @@
+<h1>Shorten URL</h1>
+<h2>Success</h2>
+
+<div>
+  Your short URL is: <%= link_to @web_link.redirect_url, @web_link.redirect_url, target: :_blank %> <br>
+  Your short URL expires on: TBD
+</div>
+
+<br><br>
+<%= link_to "Go back", root_path %>
