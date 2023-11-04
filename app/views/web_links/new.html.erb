@@ -2,10 +2,10 @@
 
 <%= form_for @web_link do |form| %>
   <%= form.label :query, "Short URL Suffix" %>
-  <%= form.text_field :key %>
+  <%= form.text_field :key, placeholder: "Optional" %>
   <br>
   <%= form.label :query, "URL Destination" %>
-  <%= form.text_field :destination %>
+  <%= form.text_field :destination, required: true %>
   <br>
   <br>
   <%= form.submit "Shorten URL!" %>
