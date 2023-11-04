@@ -30,9 +30,11 @@ describe WebLink, type: :model do
 
   context "#key" do
     context "when key is missing" do
-      let(:web_link) { build(:google_web_link, key: nil) }
+      let(:web_link) { create(:google_web_link, key: nil) }
 
-      it { expect(subject).to be_invalid }
+      it "auto generates a key" do
+        expect(subject.key).to be_present
+      end
     end
 
     context "when key is more than 10 chars long" do
