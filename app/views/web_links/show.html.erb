@@ -3,7 +3,7 @@
 
 <div>
   Your short URL is: <%= link_to @web_link.redirect_url, @web_link.redirect_url, target: :_blank %> <br>
-  Your short URL expires on: TBD
+  Your short URL expires on: <%= @web_link.expires_at.strftime("%d %b %Y") %>
 </div>
 
 <br><br>
