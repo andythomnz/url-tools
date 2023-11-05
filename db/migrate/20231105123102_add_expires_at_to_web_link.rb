@@ -4,7 +4,7 @@ class AddExpiresAtToWebLink < ActiveRecord::Migration[7.1]
 
     execute %[
       UPDATE web_links
-      SET expires_at = DATETIME('now' , '+6 months')
+      SET expires_at = NOW() + interval '6 month'
     ]
 
     change_column :web_links, :expires_at, :datetime, null: false
