@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UrlTools</title>
+    <title>Linkchen.de</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -18,6 +18,11 @@
   </head>
 
   <body>
+    <div class="header">
+      <h1>Linkchen.de</h1>
+    </div>
+    <%= image_tag "paperclip.png", class: "logo" %>
+
     <%= yield %>
   </body>
 </html>

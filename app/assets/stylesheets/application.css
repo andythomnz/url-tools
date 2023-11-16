@@ -16,4 +16,17 @@
 
 body {
     font-family: "Exo 2", sans-serif;
+    text-align: center;
+}
+
+.header {
+    background-color: #7A8F9C;
+    color: #152B42;
+    height: 100px;
+    line-height: 100px;
+}
+
+.logo {
+    height: 100px;
+    margin: 10px;
 }

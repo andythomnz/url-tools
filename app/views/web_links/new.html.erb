@@ -1,11 +1,7 @@
-<h1>Shorten URL</h1>
-
 <%= form_for @web_link do |form| %>
-  <%= form.label :query, "Short URL Suffix" %>
-  <%= form.text_field :key, placeholder: "Optional" %>
+  <%= form.label :destination, "Long URL to be shortened:" %>
   <br>
-  <%= form.label :query, "URL Destination" %>
-  <%= form.text_field :destination, required: true %>
+  <%= form.text_field :destination, required: true, placeholder: "https://www.example.com/abc123?key=xyz&id=456" %>
   <br>
   <br>
   <%= form.submit "Shorten URL!" %>
