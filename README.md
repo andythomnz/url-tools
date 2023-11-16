@@ -1,24 +1,24 @@
-# README
+# URL Tools / Linkchen.de
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Linkchen.de](https://www.linkchen.de) is a very basic URL shortening service.
 
-Things you may want to cover:
+## Technical stuff
 
-* Ruby version
+* This is a Rails app (Rails 7.1, Ruby 3.2.2)
+* To start a local development server `bundle install` and `rails s`
+* Tested with Rspec `bundle exec rspec`
+* Tests run via Github Actions on PR and master branch
+* Automatically deployed by Github Actions to [Fly.io](https://www.fly.io) from master branch
 
-* System dependencies
 
-* Configuration
+## Origin of the name
 
-* Database creation
+I was struggling to find an available (and cheap) domain name that had any relevance to a URL shortening service.
+I recalled that in the German language there is a diminutive form; when adding "chen" to the end of some German nouns,
+it transforms them to a smaller / cuter version. For example, a Schwein is a pig but a Schweinchen is a piglet. 
 
-* Database initialization
+So a Linkchen is a play on words for a smaller / cuter version of a Link.
 
-* How to run the test suite
+And luckily, the domain name was available. 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Linkchen.de](https://www.linkchen.de)
